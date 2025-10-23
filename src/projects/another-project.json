@@ -1,8 +1,0 @@
-{
-  "title": "Another Cool Project",
-  "description": "Description of your project and what it does.",
-  "tech": ["Python", "FastAPI", "PostgreSQL"],
-  "github": "https://github.com/smartcraze/another-project",
-  "live": "",
-  "featured": true
-}

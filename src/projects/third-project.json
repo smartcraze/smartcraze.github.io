@@ -1,8 +1,0 @@
-{
-  "title": "Third Project",
-  "description": "Your third project description goes here.",
-  "tech": ["Go", "Docker", "Redis"],
-  "github": "https://github.com/smartcraze/third-project",
-  "live": "https://demo-url.com",
-  "featured": false
-}

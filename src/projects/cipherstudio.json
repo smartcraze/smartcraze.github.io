@@ -1,0 +1,10 @@
+{
+  "title": "CipherStudio",
+  "description": "A react based in-browser code editor with live preview.",
+  "tech": ["React", "Monaco Editor", "CodeMirror", "Vite"],
+  "category": "fullstack",
+  "github": "https://github.com/smartcraze/CipherStudio",
+  "live": "https://CipherStudio.surajv.me",
+  "video": "https://www.tella.tv/video/cmh34lvd4003304l46xyjgzbq/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+  "featured": true
+}
