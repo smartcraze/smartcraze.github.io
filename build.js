@@ -96,7 +96,7 @@ fs.ensureDirSync(path.join(distDir, 'blog'));
 fs.writeFileSync(path.join(distDir, 'blog', 'index.html'), blogListPageHtml);
 
 // Copy index.html and other root files
-const rootFiles = ['index.html', 'projects.html'];
+const rootFiles = ['index.html', 'projects.html', 'contact.html'];
 rootFiles.forEach(file => {
   const srcPath = path.join(srcDir, file);
   const distPath = path.join(distDir, file);

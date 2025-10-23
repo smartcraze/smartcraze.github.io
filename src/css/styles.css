@@ -27,7 +27,14 @@ p { margin-bottom: 15px; color: #555; }
 
 /* Sections */
 section { padding: 40px 0; }
-.projects, .blog, .contact { border-top: 1px solid #f5f5f5; }
+.projects, .blog, .contact, .skills { border-top: 1px solid #f5f5f5; }
+
+/* Skills */
+.skills-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.skill-item { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 15px; border: 1px solid #eee; border-radius: 6px; transition: all 0.2s; }
+.skill-item:hover { border-color: #0066cc; transform: translateY(-2px); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.skill-item img { width: 40px; height: 40px; }
+.skill-item span { font-size: 12px; color: #666; text-align: center; }
 
 /* Projects */
 .projects-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
@@ -64,6 +71,19 @@ section { padding: 40px 0; }
 /* Contact */
 .contact-list { list-style: none; line-height: 1.8; }
 
+/* Contact Page */
+.contact-page { padding-top: 20px; min-height: 60vh; }
+.contact-content { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 30px; }
+.contact-info h2, .availability h2 { font-size: 20px; margin-bottom: 20px; }
+.contact-methods { display: flex; flex-direction: column; gap: 20px; }
+.contact-method { padding: 15px; border: 1px solid #eee; border-radius: 6px; }
+.contact-method h3 { font-size: 16px; margin-bottom: 8px; color: #333; }
+.contact-method h3 i { margin-right: 8px; color: #0066cc; }
+.contact-method a { color: #0066cc; font-size: 15px; }
+.availability { padding: 20px; background: #f8f8f8; border-radius: 6px; }
+.availability ul { list-style: none; margin-top: 15px; line-height: 2; }
+.availability li { font-size: 15px; color: #555; }
+
 /* Footer */
 .footer { padding: 30px 0; text-align: center; color: #999; font-size: 13px; border-top: 1px solid #f5f5f5; margin-top: 40px; }
 
@@ -99,4 +119,8 @@ section { padding: 40px 0; }
   section { padding: 30px 0; }
   .projects-list { grid-template-columns: 1fr; }
   .video-modal-content { width: 95%; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .skill-item { padding: 10px; }
+  .skill-item img { width: 32px; height: 32px; }
+  .contact-content { grid-template-columns: 1fr; gap: 25px; }
 }
