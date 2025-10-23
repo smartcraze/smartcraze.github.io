@@ -1,0 +1,25 @@
+{
+  "name": "smartcraze-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio and blog website",
+  "scripts": {
+    "build": "node build.js",
+    "deploy": "npm run build && gh-pages -d dist",
+    "dev": "npm run build && node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "github-pages"
+  ],
+  "author": "smartcraze",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-attrs": "^4.1.6",
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Example Project",
+  "description": "This is an example project. Replace this with your actual project details.",
+  "tech": ["Node.js", "Express", "MongoDB"],
+  "github": "https://github.com/smartcraze/project-name",
+  "live": "",
+  "featured": true
+}

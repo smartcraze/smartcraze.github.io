@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <title>{{title}} - Suraj Vishwakarma</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">SmartCraze</a>
+            <ul class="nav-links">
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/blog/" class="nav-link">Blog</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <div class="container">
+            <header class="blog-header">
+                <a href="/blog/" class="back-link">← Back to Blog</a>
+                <h1>{{title}}</h1>
+                <div class="blog-meta">
+                    <time datetime="{{date}}">{{date}}</time>
+                </div>
+                <div class="blog-tags">
+                    {{tags}}
+                </div>
+            </header>
+            <div class="blog-content">
+                {{content}}
+            </div>
+            <footer class="blog-footer">
+                <div class="share-buttons">
+                    <span>Share:</span>
+                    <a href="https://twitter.com/intent/tweet?text={{title}}&url=" class="share-btn">Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn">LinkedIn</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Suraj Vishwakarma</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
