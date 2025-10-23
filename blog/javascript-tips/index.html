@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practical JavaScript tips and tricks to write better, more efficient code">
+    <meta property="og:title" content="5 JavaScript Tips Every Developer Should Know">
+    <meta property="og:description" content="Practical JavaScript tips and tricks to write better, more efficient code">
+    <title>5 JavaScript Tips Every Developer Should Know - Suraj Vishwakarma</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">SmartCraze</a>
+            <ul class="nav-links">
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/blog/" class="nav-link">Blog</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <div class="container">
+            <header class="blog-header">
+                <a href="/blog/" class="back-link">← Back to Blog</a>
+                <h1>5 JavaScript Tips Every Developer Should Know</h1>
+                <div class="blog-meta">
+                    <time datetime="2025-10-15">2025-10-15</time>
+                </div>
+                <div class="blog-tags">
+                    <span class="tag">javascript</span><span class="tag">tips</span><span class="tag">programming</span>
+                </div>
+            </header>
+            <div class="blog-content">
+                <h1 id="5-javascript-tips-every-developer-should-know" tabindex="-1">5 JavaScript Tips Every Developer Should Know</h1>
+<p>JavaScript is full of powerful features that can make your code more elegant and efficient. Here are five tips that every developer should have in their toolkit.</p>
+<h2 id="1.-destructuring-assignment" tabindex="-1">1. Destructuring Assignment</h2>
+<p>Destructuring makes it easy to extract values from arrays or properties from objects.</p>
+<pre><code class="language-javascript">// Object destructuring
+const user = {
+    name: 'SmartCraze',
+    age: 25,
+    location: 'Earth'
+};
+
+const { name, age } = user;
+console.log(name); // 'SmartCraze'
+
+// Array destructuring
+const colors = ['red', 'green', 'blue'];
+const [primary, secondary] = colors;
+console.log(primary); // 'red'
+
+// With default values
+const { theme = 'dark' } = user;
+console.log(theme); // 'dark'
+</code></pre>
+<h2 id="2.-spread-operator" tabindex="-1">2. Spread Operator</h2>
+<p>The spread operator (<code>...</code>) is incredibly versatile for working with arrays and objects.</p>
+<pre><code class="language-javascript">// Copying arrays
+const original = [1, 2, 3];
+const copy = [...original];
+
+// Merging arrays
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const merged = [...arr1, ...arr2];
+
+// Copying objects
+const person = { name: 'John', age: 30 };
+const updatedPerson = { ...person, age: 31 };
+
+// Function arguments
+const numbers = [1, 2, 3, 4, 5];
+console.log(Math.max(...numbers)); // 5
+</code></pre>
+<h2 id="3.-optional-chaining" tabindex="-1">3. Optional Chaining</h2>
+<p>Safely access nested object properties without worrying about null or undefined values.</p>
+<pre><code class="language-javascript">const user = {
+    profile: {
+        name: 'SmartCraze'
+    }
+};
+
+// Without optional chaining
+const city = user.profile &amp;&amp; user.profile.address &amp;&amp; user.profile.address.city;
+
+// With optional chaining
+const cityNew = user.profile?.address?.city;
+console.log(cityNew); // undefined (no error!)
+
+// Works with function calls too
+const result = user.getDetails?.();
+</code></pre>
+<h2 id="4.-nullish-coalescing-operator" tabindex="-1">4. Nullish Coalescing Operator</h2>
+<p>The nullish coalescing operator (<code>??</code>) returns the right operand when the left is <code>null</code> or <code>undefined</code>.</p>
+<pre><code class="language-javascript">const value = null ?? 'default';
+console.log(value); // 'default'
+
+// Different from ||
+const count = 0 || 42;    // 42 (falsy value)
+const count2 = 0 ?? 42;   // 0 (only null/undefined)
+
+// Practical use
+const user = {
+    name: 'SmartCraze',
+    posts: 0
+};
+
+const postCount = user.posts ?? 'No posts';
+console.log(postCount); // 0 (not 'No posts')
+</code></pre>
+<h2 id="5.-array-methods%3A-map%2C-filter%2C-reduce" tabindex="-1">5. Array Methods: map, filter, reduce</h2>
+<p>These methods are essential for working with arrays functionally.</p>
+<pre><code class="language-javascript">const numbers = [1, 2, 3, 4, 5];
+
+// map: Transform each element
+const doubled = numbers.map(n =&gt; n * 2);
+// [2, 4, 6, 8, 10]
+
+// filter: Keep elements that match a condition
+const evenNumbers = numbers.filter(n =&gt; n % 2 === 0);
+// [2, 4]
+
+// reduce: Combine elements into a single value
+const sum = numbers.reduce((acc, n) =&gt; acc + n, 0);
+// 15
+
+// Chaining methods
+const result = numbers
+    .filter(n =&gt; n &gt; 2)
+    .map(n =&gt; n * 2)
+    .reduce((acc, n) =&gt; acc + n, 0);
+// 24 (3*2 + 4*2 + 5*2)
+</code></pre>
+<h2 id="bonus%3A-template-literals" tabindex="-1">Bonus: Template Literals</h2>
+<p>Create strings with embedded expressions easily.</p>
+<pre><code class="language-javascript">const name = 'SmartCraze';
+const greeting = `Hello, ${name}!`;
+
+// Multi-line strings
+const html = `
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;${name}&lt;/h2&gt;
+        &lt;p&gt;Welcome to my blog!&lt;/p&gt;
+    &lt;/div&gt;
+`;
+
+// Expression evaluation
+const price = 29.99;
+const tax = 0.1;
+const total = `Total: ${(price * (1 + tax)).toFixed(2)}`;
+</code></pre>
+<h2 id="conclusion" tabindex="-1">Conclusion</h2>
+<p>These JavaScript features can significantly improve your code’s readability and maintainability. Start incorporating them into your projects, and you’ll find yourself writing cleaner, more modern JavaScript.</p>
+<p>Remember: the best way to learn is by doing. Try implementing these patterns in your next project!</p>
+<hr>
+<p><em>What are your favorite JavaScript tips? Let me know!</em></p>
+
+            </div>
+            <footer class="blog-footer">
+                <div class="share-buttons">
+                    <span>Share:</span>
+                    <a href="https://twitter.com/intent/tweet?text=5 JavaScript Tips Every Developer Should Know&url=" class="share-btn">Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn">LinkedIn</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Suraj Vishwakarma</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
