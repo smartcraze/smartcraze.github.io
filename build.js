@@ -60,23 +60,33 @@ blogFiles.forEach(file => {
   };
   
   blogs.push(blog);
+});
+
+// Sort blogs by date (newest first)
+blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+// Generate individual blog pages with navigation
+blogs.forEach((blog, index) => {
+  const prevBlog = index < blogs.length - 1 ? blogs[index + 1] : null;
+  const nextBlog = index > 0 ? blogs[index - 1] : null;
   
-  // Generate individual blog page
+  const prevLink = prevBlog ? `<a href="/blog/${prevBlog.slug}/" class="blog-nav-link prev">← ${prevBlog.title}</a>` : '';
+  const nextLink = nextBlog ? `<a href="/blog/${nextBlog.slug}/" class="blog-nav-link next">${nextBlog.title} →</a>` : '';
+  
   let blogHtml = blogTemplate
     .replace(/{{title}}/g, blog.title)
     .replace(/{{date}}/g, blog.date)
     .replace(/{{content}}/g, blog.content)
     .replace(/{{description}}/g, blog.description)
-    .replace(/{{tags}}/g, blog.tags.map(tag => `<span class="tag">${tag}</span>`).join(''));
+    .replace(/{{tags}}/g, blog.tags.map(tag => `<span class="tag">${tag}</span>`).join(''))
+    .replace(/{{prevLink}}/g, prevLink)
+    .replace(/{{nextLink}}/g, nextLink);
   
   // Create blog directory and save HTML
-  const blogDir = path.join(distDir, 'blog', slug);
+  const blogDir = path.join(distDir, 'blog', blog.slug);
   fs.ensureDirSync(blogDir);
   fs.writeFileSync(path.join(blogDir, 'index.html'), blogHtml);
 });
-
-// Sort blogs by date (newest first)
-blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 // Generate blog list HTML
 const blogListHtml = blogs.map(blog => `
