@@ -1,38 +1,111 @@
 [
   {
-    "title": "Another Cool Project",
-    "description": "Description of your project and what it does.",
+    "title": "CipherStudio",
+    "description": "A react based in-browser code editor with live preview.",
     "tech": [
-      "Python",
-      "FastAPI",
-      "PostgreSQL"
+      "React",
+      "Monaco Editor",
+      "CodeMirror",
+      "Vite"
     ],
-    "github": "https://github.com/smartcraze/another-project",
-    "live": "",
+    "category": "fullstack",
+    "github": "https://github.com/smartcraze/CipherStudio",
+    "live": "https://CipherStudio.surajv.me",
+    "video": "https://www.tella.tv/video/cmh34lvd4003304l46xyjgzbq/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
     "featured": true
   },
   {
-    "title": "Example Project",
-    "description": "This is an example project. Replace this with your actual project details.",
+    "title": "EzSnipe CLI",
+    "description": "A powerful component and backend delivery CLI tool for rapid development — install UI blocks and server modules instantly.",
     "tech": [
       "Node.js",
-      "Express",
-      "MongoDB"
+      "CLI",
+      "npm",
+      "Developer Tools",
+      "Automation"
     ],
-    "github": "https://github.com/smartcraze/project-name",
-    "live": "",
+    "category": "npm-package",
+    "github": "https://github.com/smartcraze/ezsnipe-npm-package",
+    "live": "https://www.npmjs.com/package/ezsnipe",
+    "video": "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
     "featured": true
   },
   {
-    "title": "Third Project",
-    "description": "Your third project description goes here.",
+    "title": "Paytm Clone",
+    "description": "A mock transaction flow demo using Next.js — simulates Paytm-style payments with full order, redirect, and callback logic.",
     "tech": [
-      "Go",
-      "Docker",
-      "Redis"
+      "Next.js",
+      "API",
+      "Payment Integration",
+      "Mock"
     ],
-    "github": "https://github.com/smartcraze/third-project",
-    "live": "https://demo-url.com",
+    "category": "fullstack",
+    "github": "https://github.com/smartcraze/paytm-clone",
+    "live": "https://paytm.surajv.me",
+    "video": "https://www.tella.tv/video/cmbqd5mpb00000bl52thb4njf/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    "featured": false
+  },
+  {
+    "title": "RapidServe",
+    "description": "A Vercel-style platform to deploy apps directly from GitHub repos using Docker, AWS Lambda, and S3 — all from a simple dashboard.",
+    "tech": [
+      "Docker",
+      "AWS Lambda",
+      "S3",
+      "Next.js",
+      "DevOps"
+    ],
+    "category": "fullstack",
+    "github": "https://github.com/smartcraze/vercel-deploy",
+    "live": "https://rapidserve.surajv.me",
+    "video": "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    "featured": true
+  },
+  {
+    "title": "SketchKaro",
+    "description": "A real-time collaborative whiteboard built with Next.js, Canvas, WebSockets, and Turborepo.",
+    "tech": [
+      "Next.js",
+      "Canvas",
+      "WebSocket",
+      "Turborepo",
+      "Bun"
+    ],
+    "category": "fullstack",
+    "github": "https://github.com/smartcraze/SketchKaro",
+    "live": "https://sketchkaro.surajv.me",
+    "video": "https://www.tella.tv/video/cmbz7dul8000b0bji1p1e08a6/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    "featured": true
+  },
+  {
+    "title": "StudySphere",
+    "description": "An animated Ed-Tech landing page built using Next.js, Framer Motion, and Tailwind CSS.",
+    "tech": [
+      "Next.js",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Shadcn"
+    ],
+    "category": "fullstack",
+    "github": "https://github.com/smartcraze/E-learning-platform",
+    "live": "https://studysphere.surajv.me",
+    "video": "https://www.tella.tv/video/cmbuybgmx00000bjo3low9jzb/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    "featured": false
+  },
+  {
+    "title": "Solana Token Launchpad",
+    "description": "Create and mint SPL tokens on Solana Devnet with metadata, wallet integration, and a single-click minting experience.",
+    "tech": [
+      "Solana",
+      "Web3",
+      "SPL Token",
+      "React",
+      "Blockchain"
+    ],
+    "category": "web3",
+    "github": "https://github.com/smartcraze/100xdev-web3/tree/main/token-lounchpad-2",
+    "live": "",
+    "video": "https://www.tella.tv/video/cmbsyno0t000t0bky1lg412i3/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
     "featured": false
   }
 ]
